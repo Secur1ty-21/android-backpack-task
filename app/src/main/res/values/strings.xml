@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Backpack Picker</string>
+    <string name="hint_input_weight">Weight (kg)</string>
+    <string name="hint_input_volume">Volume (l)</string>
+    <string name="hint_input_name">Name of item</string>
+    <string name="helper_for_backpack_input_values">Set the parameters of two backpacks\nEnter the parameters of the %d backpack</string>
+    <string name="text_button_done">Done</string>
+    <string name="text_button_add">Add</string>
+    <string name="text_successfully_add_backpack">Backpack successfully added</string>
+    <string name="helper_for_item_input_values">Filling backpacks\n\nEnter the parameters of the %d item</string>
+    <string name="text_item">%s\nWeight: %dkg\nVolume: %dl\n\n</string>
+</resources>
