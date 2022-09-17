@@ -1,10 +1,15 @@
 package com.example.backpackpicker.model;
 
-public class Backpack {
-    public int capacityWeight;
-    public int capacityVolume;
+import java.io.Serializable;
 
-    public Backpack(int capacityWeight, int capacityVolume) {
+public class Backpack implements Serializable {
+    public final float capacityWeight;
+    public final float capacityVolume;
+    public float weightItems;
+    public float volumeItems;
+    public String items = "";
+
+    public Backpack(final float capacityWeight, final float capacityVolume) {
         this.capacityWeight = capacityWeight;
         this.capacityVolume = capacityVolume;
     }

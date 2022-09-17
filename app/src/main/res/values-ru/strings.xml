@@ -4,10 +4,21 @@
     <string name="hint_input_weight">Вес (кг)</string>
     <string name="hint_input_volume">Объем (л)</string>
     <string name="hint_input_name">Название предмета</string>
+    <string name="congratulations">Поздравляем, свободного места в рюкзаках не осталось, вы загрузились по полной!</string>
     <string name="helper_for_backpack_input_values">Задайте  параметры двух рюкзаков\n\nВведите параметры %d рюкзака</string>
     <string name="text_button_done">Готово</string>
     <string name="text_button_add">Добавить</string>
-    <string name="text_successfully_add_backpack">Рюкзак успешно добавлен!</string>
+    <string name="text_button_reset">Сбросить</string>
+    <string name="text_backpack_space_info">Осталось места на %.1fкг и %.1fл</string>
+    <string name="text_successfully_add_backpack">Рюкзак добавлен!</string>
+    <string name="text_successfully_add_item">%s добавлен в рюкзак %d</string>
+    <string name="text_error_add_backpack">У рюкзака должен быть вместимый вес и объем</string>
+    <string name="text_error_add_item">На этот предмет нет места в обоих рюкзаках</string>
+    <string name="text_error_add_backpack_empty_weight">Введите вес</string>
+    <string name="text_error_add_backpack_empty_volume">Введите объем</string>
+    <string name="text_error_add_item_empty_name">Введите имя предмета</string>
+    <string name="text_error_add_backpack_big_value">Рюкзаков с такой вместимостью не существует</string>
+    <string name="text_error_add_item_big_value">Такой предмет не поместится ни в один рюкзак</string>
     <string name="helper_for_item_input_values">Заполняем рюкзаки\n\nВведите параметры %d предмета</string>
-    <string name="text_item">%s\nВес: %dкг\nОбъем: %dл\n\n</string>
+    <string name="text_item">%s\nВес: %.1fкг\nОбъем: %.1fл\n\n</string>
 </resources>

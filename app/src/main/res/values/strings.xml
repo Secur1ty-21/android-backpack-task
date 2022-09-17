@@ -3,10 +3,21 @@
     <string name="hint_input_weight">Weight (kg)</string>
     <string name="hint_input_volume">Volume (l)</string>
     <string name="hint_input_name">Name of item</string>
+    <string name="congratulations">Congratulations, there is no free space left in your backpacks, you have loaded up to the fullest!</string>
     <string name="helper_for_backpack_input_values">Set the parameters of two backpacks\nEnter the parameters of the %d backpack</string>
     <string name="text_button_done">Done</string>
     <string name="text_button_add">Add</string>
-    <string name="text_successfully_add_backpack">Backpack successfully added</string>
+    <string name="text_button_reset">Reset</string>
+    <string name="text_backpack_space_info">There is space left for %.1fkg and %.1fL</string>
+    <string name="text_successfully_add_backpack">Backpack added</string>
+    <string name="text_successfully_add_item">%s added to backpack %d</string>
+    <string name="text_error_add_backpack">The backpack must have a capacity weight and volume</string>
+    <string name="text_error_add_item">There is no room for this item in both backpacks</string>
+    <string name="text_error_add_backpack_empty_weight">Enter the weight</string>
+    <string name="text_error_add_backpack_empty_volume">Enter the volume</string>
+    <string name="text_error_add_item_empty_name">Enter the item name</string>
+    <string name="text_error_add_backpack_big_value">Backpacks with such a capacity do not exist</string>
+    <string name="text_error_add_item_big_value">Such an item will not fit in any backpack</string>
     <string name="helper_for_item_input_values">Filling backpacks\n\nEnter the parameters of the %d item</string>
-    <string name="text_item">%s\nWeight: %dkg\nVolume: %dl\n\n</string>
+    <string name="text_item">%s\nWeight: %.1fkg\nVolume: %.1fL\n\n</string>
 </resources>

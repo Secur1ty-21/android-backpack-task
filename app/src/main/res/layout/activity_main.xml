@@ -12,7 +12,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_reset"
+            android:text="@string/text_button_reset"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            app:cornerRadius="10dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="20dp"/>
+
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/text_backpack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -60,7 +71,10 @@
                 android:id="@+id/input_weight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal"
+                android:maxLength="7"
+                android:textColorHint="#616161"
+                tools:ignore="TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -76,7 +90,10 @@
                 android:id="@+id/input_volume"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal"
+                android:maxLength="7"
+                android:textColorHint="#616161"
+                tools:ignore="TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
@@ -86,6 +103,7 @@
             android:layout_marginTop="20dp"
             android:backgroundTint="@color/secondary"
             android:text="@string/text_button_done"
+            android:textAllCaps="false"
             app:cornerRadius="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -100,11 +118,11 @@
             android:progress="0"
             android:scaleY="4"
             android:visibility="invisible"
-            tools:visibility="visible"
             app:layout_constraintEnd_toStartOf="@id/middle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ic_backpack1"
-            tools:progress="40" />
+            tools:progress="40"
+            tools:visibility="visible" />
 
         <com.google.android.material.progressindicator.LinearProgressIndicator
             android:id="@+id/progress_backpack2"
@@ -115,35 +133,35 @@
             android:progress="0"
             android:scaleY="4"
             android:visibility="invisible"
-            tools:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/middle"
             app:layout_constraintTop_toBottomOf="@id/ic_backpack1"
-            tools:progress="40" />
+            tools:progress="40"
+            tools:visibility="visible" />
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/ic_backpack1"
             android:layout_width="0dp"
             android:layout_height="100dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:src="@drawable/ic_backpack1"
             android:visibility="invisible"
-            tools:visibility="visible"
             app:layout_constraintEnd_toStartOf="@id/middle"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/button_take_input" />
+            app:layout_constraintTop_toBottomOf="@id/current_backpack1_state"
+            tools:visibility="visible" />
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/ic_backpack2"
             android:layout_width="0dp"
             android:layout_height="100dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:src="@drawable/ic_backpack2"
             android:visibility="invisible"
-            tools:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/middle"
-            app:layout_constraintTop_toBottomOf="@id/button_take_input" />
+            app:layout_constraintTop_toBottomOf="@id/current_backpack2_state"
+            tools:visibility="visible" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/middle"
@@ -153,34 +171,64 @@
             app:layout_constraintGuide_percent="0.5" />
 
         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/current_backpack1_state"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:visibility="invisible"
+            android:text="@string/text_backpack_space_info"
+            app:layout_constraintEnd_toStartOf="@id/middle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button_take_input"
+            tools:text="Осталось места на 10кг и 10л"
+            tools:visibility="visible" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/current_backpack2_state"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/text_backpack_space_info"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/middle"
+            app:layout_constraintTop_toBottomOf="@id/button_take_input"
+            tools:text="Осталось места на 10кг и 10л"
+            tools:visibility="visible" />
+
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/list_items_backpack1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:gravity="center"
-            android:visibility="invisible"
+            android:padding="10dp"
             android:textColor="@color/white"
+            android:visibility="invisible"
             app:layout_constraintEnd_toStartOf="@id/middle"
             app:layout_constraintStart_toStartOf="parent"
-            tools:visibility="visible"
-            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@id/progress_backpack1"
             tools:text="Палатка\nВес: 20кг\nОбъем: 50л\n\nТермос\nВес: 0.5кг\nОбъем: 1л"
-            app:layout_constraintTop_toBottomOf="@id/progress_backpack1" />
+            tools:visibility="visible" />
 
         <com.google.android.material.textview.MaterialTextView
-            android:padding="10dp"
             android:id="@+id/list_items_backpack2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:gravity="center"
+            android:padding="10dp"
             android:textColor="@color/white"
-            tools:visibility="visible"
             android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/middle"
             app:layout_constraintTop_toBottomOf="@id/progress_backpack1"
-            tools:text="Палатка\nВес: 20кг\nОбъем: 50л\n\nТермос\nВес: 0.5кг\nОбъем: 1л" />
+            tools:text="Палатка\nВес: 20кг\nОбъем: 50л\n\nТермос\nВес: 0.5кг\nОбъем: 1л"
+            tools:visibility="visible" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.core.widget.NestedScrollView>
