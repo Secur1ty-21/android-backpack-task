@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Сборщик Рюкзаков</string>
+    <string name="hint_input_weight">Вес (кг)</string>
+    <string name="hint_input_volume">Объем (л)</string>
+    <string name="hint_input_name">Название предмета</string>
+    <string name="helper_for_backpack_input_values">Задайте  параметры двух рюкзаков\n\nВведите параметры %d рюкзака</string>
+    <string name="text_button_done">Готово</string>
+    <string name="text_button_add">Добавить</string>
+    <string name="text_successfully_add_backpack">Рюкзак успешно добавлен!</string>
+    <string name="helper_for_item_input_values">Заполняем рюкзаки\n\nВведите параметры %d предмета</string>
+    <string name="text_item">%s\nВес: %dкг\nОбъем: %dл\n\n</string>
+</resources>
