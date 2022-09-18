@@ -250,11 +250,11 @@ public class MainActivity extends AppCompatActivity {
     private void recoverState() {
         final String savedBackpack1 = preferences.getString(saveBackpack1, "");
         final String savedBackpack2 = preferences.getString(saveBackpack2, "");
-        if (!savedBackpack1.equals("null")) {
-            backpack1 = gson.fromJson(savedBackpack1, Backpack.class);
+        backpack1 = gson.fromJson(savedBackpack1, Backpack.class);
+        backpack2 = gson.fromJson(savedBackpack2, Backpack.class);
+        if (backpack1 != null) {
             showFirstBackpack();
-            if (!savedBackpack2.equals("null")) {
-                backpack2 = gson.fromJson(savedBackpack2, Backpack.class);
+            if (backpack2 != null) {
                 numOfItems = preferences.getInt(saveNumOfItems, 1);
                 setUiOnAddsItem();
                 refreshBackpacksProgress();
